@@ -1,0 +1,14 @@
+application: radiotrends
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /tasks/updatedb
+  script: update_db.py
+  
+- url: /(display)?
+  script: display_tracks.py
+  
+- url: /tasks/deletetracks
+  script: delete_tracks.py
