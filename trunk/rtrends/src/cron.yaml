@@ -1,4 +1,4 @@
 cron:
 - description: db update 
   url: /tasks/update_db
-  schedule: every 6 hours
+  schedule: every 3 hours

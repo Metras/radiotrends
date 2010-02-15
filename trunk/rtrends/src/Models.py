@@ -10,6 +10,9 @@ class RadioProgram(db.Model):
     name = db.StringProperty(required=True)
     host = db.StringProperty(required=True)
     timeslot = db.StringProperty(required=True)
+    page_data = db.TextProperty()
+    first_indexed = db.DateTimeProperty
+    last_indexed = db.DateTimeProperty
     #timeslot_start = db.DateTimeProperty
     #timeslot_end = db.DateTimeProperty
 
@@ -23,3 +26,4 @@ class TrackPlayed(db.Model):
     track = db.ReferenceProperty(Track)
     program = db.ReferenceProperty(RadioProgram)
     air_date = db.DateProperty(required=True)
+    air_time = db.TimeProperty()
